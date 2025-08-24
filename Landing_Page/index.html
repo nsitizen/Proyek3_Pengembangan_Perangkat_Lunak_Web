@@ -1,160 +1,183 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>LandingPage_SitiSoviyyah</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="assets/Logo_S_Mini.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block w3-black">HOME</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
-    </div>
-  </div>
+<!-- Navigasi Bar -->
+<div class="navbar">
+  <a href="#biodata">Biodata</a>
+  <a href="#pendidikan">Pendidikan</a>
+  <a href="#kemampuan">Kemampuan</a>
+  <a href="#portofolio">Portofolio</a>
+  <a href="#kontak">Kontak</a>
+  <a href="#galeri">Galeri</a>
 </div>
 
-<!-- Header with image -->
-<header class="bgimg w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-tag">Open from 6am to 5pm</span>
-  </div>
-  <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
-  </div>
-  <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-text-white">15 Adr street, 5015</span>
-  </div>
+<!-- Header with banner -->
+<header class="banner" id="home">
+  <h1 class="banner-title">Welcome to My Page</h1>
 </header>
 
-<!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-grayscale w3-large">
-
-<!-- About Container -->
-<div class="w3-container" id="about">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
-    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+<!-- Biodata Section -->
+<section id="biodata" class="biodata-section">
+  <div class="biodata-container">
+    <h5 class="biodata-title">
+      <span>BIODATA</span>
+    </h5>
+    
+    <div class="biodata-content">
+      <img src="assets/Foto_KTM.png" alt="Foto Profil Siti Soviyyah" class="biodata-img">
+      
+      <div class="biodata-text">
+        <p>Nama : Siti Soviyyah</p>
+        <p>Status : Mahasiswa Semester 3 D3 Teknik Informatika</p>
+        <p>Deskripsi : Saya seorang mahasiswa yang cukup sederhana, menyukai tantangan, pengamat, 
+          pendengar yang baik, tenang, dan berjiwa introspektif.
+        </p>
+      </div>
     </div>
-    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
   </div>
-</div>
+</section>
 
-<!-- Menu Container -->
-<div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:700px">
- 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
-  
-    <div class="w3-row w3-center w3-card w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-        <div class="w3-col s6 tablink">Eat</div>
+<!-- Pendidikan Section -->
+<section id="pendidikan" class="pendidikan-section">
+  <div class="pendidikan-container">
+    <h5 class="pendidikan-title">
+      <span>PENDIDIKAN</span>
+    </h5>
+    
+    <div class="pendidikan-content">
+      <div class="pendidikan-text">
+        <ul>
+          <li>SDIT Al-Fadhil (2011-2017)</li>
+          <li>MTs Negeri 1 Garut (2017-2020)</li>
+          <li>SMA Negeri 25 Garut (2020-2023)</li>
+          <li>Politeknik Negeri Bandung (2024-sekarang)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kemampuan Section -->
+<section id="kemampuan" class="kemampuan-section">
+  <div class="kemampuan-container">
+    <h5 class="kemampuan-title">
+      <span>KEMAMPUAN</span>
+    </h5>
+    
+    <div class="kemampuan-content">
+      <div class="kemampuan-text">
+        <ul>
+          <li>Desain Grafis</li>
+          <li>Fotografi</li>
+          <li>C, C++, CSS, HTML (Intermediet)</li>
+          <li>Python (Beginner)</li>
+          <li>Data Analis (Beginner)</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portofolio Section -->
+<section id="portofolio" class="portofolio-section">
+  <div class="portofolio-container">
+    <h5 class="portofolio-title">
+      <span>PORTOFOLIO</span>
+    </h5>
+    
+    <div class="portofolio-content">
+      <div class="portofolio-text">
+        <ol>
+          <li>Proyek Aplikasi "Break Bricks Game"</li>
+          <ul>
+            <li>Mengembangkan game 2D menggunakan bahasa C dan library Raylib.</li>
+            <li>Menambahkan fitur multi-level, efek suara, leaderboard, power-up, dan lain-lain.</li>
+            <li>Link Github: <a href="https://github.com/wyandhanupapoy/Break-Bricks" target="_blank">Break Bricks Game</a></li>
+          </ul>
+          <li>Proyek Program "Paper Citation Manager"</li>
+          <ul>
+            <li>Program yang dirancang untuk membantu pengguna dalam mengelola dan menganalisis data paper ilmiah.</li>
+            <li>Menggunakan bahasa C dengan berbagai struktur data seperti Single Linked List, Double Linked List, Tree, Stack, dan Queue.</li>
+            <li>Link Github: <a href="https://github.com/nezyazulfa/Tubes_SDA" target="_blank">Paper Citation Manager</a></li>
+          </ul>
+          <li>Kompetisi Data Mining Gemastik (2025)</li>
+          <ul>
+            <li>Peserta kompetisi tingkat nasional di bidang penambangan data.</li>
+            <li>Berkontribusi dalam tim untuk proses pembersihan, analisis awal, modelling data, dan prediksi model.</li>
+          </ul>
+          <li>Sertifikasi Online - Pemrograman Dasar Python dan Library Pandas</li>
+          <ul>
+            <li>Menguasai dasar-dasar Python dan Library Pandas</li>
+            <li>Link Sertifikat: <a href="https://drive.google.com/drive/u/0/folders/10u8oLvm1fMWSRX1AOYMh9kl0MOIloWV8" target="_blank">Sertifikat Online</a></li>
+          </ul>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontak Section -->
+<section id="kontak" class="kontak-section">
+  <div class="kontak-container">
+    <h5 class="kontak-title">
+      <span>KONTAK</span>
+    </h5>
+
+    <div class="kontak-icons">
+      <a href="mailto:sitisoviyyah@gmail.com" target="_blank" aria-label="Email">
+        <i class="fas fa-envelope"></i>
       </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-        <div class="w3-col s6 tablink">Drink</div>
+      <a href="https://instagram.com/sitsvyyh" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://x.com/viyyahmeow" target="_blank" aria-label="X (Twitter)">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://wa.me/6281224705861" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://github.com/nsitizen" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
       </a>
     </div>
+  </div>
+</section>
 
-    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Bread Basket</h5>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+<!-- Galeri Section -->
+<section id="galeri" class="galeri-section">
+  <div class="galeri-container">
+    <h5 class="galeri-title">
+      <span>GALERI</span>
+    </h5>
     
-      <h5>Honey Almond Granola with Fruits</h5>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h5>Belgian Waffle</h5>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-    
-      <h5>Scrambled eggs</h5>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h5>Blueberry Pancakes</h5>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+    <div class="galeri-grid">
+      <img src="assets/Bunga_merah.jpg" alt="Bunga merah">
+      <img src="assets/Bunga_kamboja_kuning.jpg" alt="Bunga kamboja kuning">
+      <img src="assets/Lapangan_biru.jpg" alt="Lapangan biru">
+      <img src="assets/Situ_bagendit.jpg" alt="Situ Bagendit">
+      <img src="assets/Bunga_dandelion.jpg" alt="Bunga dandelion putih">
     </div>
-
-    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Coffee</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p><br>
-    
-      <h5>Chocolato</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-    
-      <h5>Corretto</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-    
-      <h5>Iced tea</h5>
-      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-    
-      <h5>Soda</h5>
-      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-    </div>  
-    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
   </div>
-</div>
-
-<!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
-  <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
-    <p>Find us at some address at some place.</p>
-    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
-    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
-    </form>
-  </div>
-</div>
-
-<!-- End page content -->
-</div>
+</section>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Siti Soviyyah. All rights reserved.</p>
+    <p class="footer-credit">Built with <a href="https://www.w3schools.com/w3css/" target="_blank">W3.CSS</a></p>
+  </div>
 </footer>
-
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-}
-document.getElementById("myLink").click();
-</script>
 
 </body>
 </html>

@@ -3,13 +3,218 @@ body, html {
   font-family: "Inconsolata", sans-serif;
 }
 
-.bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/w3images/coffeehouse.jpg");
-  min-height: 75%;
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: #336b87;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-.menu {
-  display: none;
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #90afc5;
+  color: #e0f7fa;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px; /* agar tidak ketutupan navbar */
+  background: linear-gradient(135deg, #336b87, #90afc5, #763626);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+.banner-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 3px 3px 10px rgba(0,0,0,1);
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.banner-title:hover {
+  transform: scale(1.15);
+  color: #e0f7fa;
+}
+
+/* Animasi gerakan gradasi */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    text-align: center;
+  }
+}
+
+section {
+  padding: 80px 16px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.biodata-container, .pendidikan-container, .kemampuan-container, .portofolio-container, .kontak-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffded5;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.biodata-title, .pendidikan-title, .kemampuan-title, .portofolio-title, .kontak-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #336b87;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.biodata-content, .pendidikan-content, .kemampuan-content, .portofolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.biodata-img {
+  width: 150px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.biodata-text, .pendidikan-text, .kemampuan-text, .portofolio-text {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Responsiveness biodata, pendidikan, kemampuan, dan portofolio*/
+@media (min-width: 700px) {
+  .biodata-content, .pendidikan-content, .kemampuan-content, .portofolio-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.kontak-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.kontak-icons a {
+  font-size: 2rem;
+  color: #4cafab;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.kontak-icons a:hover {
+  transform: scale(1.2);
+  color: #336b87;
+}
+
+.galeri-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #336b87, #90afc5, #763626);
+}
+
+.galeri-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeri-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive galeri*/
+@media (max-width: 768px) {
+  .galeri-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeri-title {
+    font-size: 20px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #336b87;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #c8facc;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
 }

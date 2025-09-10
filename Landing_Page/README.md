@@ -15,11 +15,11 @@ Proyek ini telah melakukan modifikasi melalui:
 - Penambahan stylesheet kustom (`style.css`) untuk mengubah tampilan default  
 - Optimasi layout agar sesuai dengan kebutuhan proyek 
 - Sebelum modifikasi:
-![alt text](Landing_Page/assets/image_before.png) 
+![alt text](assets/image_before.png) 
 
 - Sesudah modifikasi:
-![alt text](Landing_Page/assets/image_after1.png)
-![alt text](Landing_Page/assets/image_after2.png)
+![alt text](assets/image_after1.png)
+![alt text](assets/image_after2.png)
 
 ## D. Link Deployment
 https://proyek3-pengembangan-perangkat-luna.vercel.app/

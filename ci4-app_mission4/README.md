@@ -1,68 +1,53 @@
-# CodeIgniter 4 Application Starter
+# 📚 Website Akademik Polban
 
-## What is CodeIgniter?
+Proyek ini adalah implementasi sederhana dari sistem akademik berbasis web menggunakan **CodeIgniter 4 + JavaScript**, dengan fokus pada manipulasi DOM, validasi form, dan interaksi data menggunakan array of objects.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## ✨ Fitur
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 1️⃣ Scope, Array, & Object
+Data mahasiswa (`students`) dan mata kuliah (`courses`) disimpan dalam **array of objects**.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### 2️⃣ DOM Selector & Manipulation
+- Menggunakan getElementById, querySelector, dan createElement() untuk:
+- Menampilkan tabel data mahasiswa & mata kuliah.
+- Menambahkan elemen baru ke DOM secara dinamis.
 
-## Installation & updates
+### 3️⃣ Event Handling
+- addEventListener digunakan untuk menangani:
+    - Klik tombol Tambah, Edit, dan Hapus.
+    - Submit form.
+- Validasi Form: Jika input kosong → tampilkan pesan error & border merah (.is-invalid).
+- Ambil Mata Kuliah:
+    - Mahasiswa bisa memilih banyak course dengan checkbox.
+    - Total SKS otomatis diperbarui setiap kali checklist berubah.
+    - Submit akan menyimpan data yang dipilih.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### 4️⃣ Common Use Cases
+- Menu Aktif: Link menu otomatis berubah style (underline + warna kuning) sesuai halaman.
+- Form Validation: Pesan error tampil di bawah input + border merah.
+- Delete Confirmation: Dialog konfirmasi sebelum menghapus data, menampilkan nama mata kuliah & SKS.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### 5️⃣ Sync vs Async
+- Contoh Async: Menggunakan setTimeout untuk simulasi proses async.
+- Persiapan REST API: Endpoint untuk courses/enroll sudah disiapkan di Routes.php untuk menerima data via fetch().
 
-## Setup
+## 🛠️ Teknologi yang Digunakan
+- PHP 8 + CodeIgniter 4 → Backend & Routing
+- JavaScript (ES6) → DOM manipulation, event handling, async fetch
+- HTML5 + CSS3 → Tampilan UI
+- Fetch API → Kirim data ke backend
+- CSRF Token → Keamanan form
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Screenshoot Hasil Uji Coba
+- Halaman Home + Menu Aktif
+![alt text](image.png)
+- Kelola Mahasiswa
+![alt text](image-1.png)
+- Kelola Mata Kuliah + Form Validation
+![alt text](image-2.png)
+- Modal Konfirmasi Hapus
+![alt text](image-3.png)
+- Contoh setTimeout (Async)
+![alt text](image-4.png)
